@@ -8,9 +8,17 @@
         {
             "src": "frontend/**",
             "use": "@vercel/static"
+        },
+        {
+            "src": "uploads/**",
+            "use": "@vercel/static"
         }
     ],
     "routes": [
+        {
+            "src": "/uploads/(.*)",
+            "dest": "uploads/$1"
+        },
         {
             "src": "/api/(.*)",
             "dest": "backend/server.js"
