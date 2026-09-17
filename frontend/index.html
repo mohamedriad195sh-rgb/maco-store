@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>متجر الملابس</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo-area">
+            <img id="storeLogo" src="" alt="Logo">
+            <h1 id="storeName">اسم المحل</h1>
+        </div>
+
+        <nav>
+            <a href="#home">الرئيسية</a>
+            <a href="#products">المنتجات</a>
+            <a href="#contact">تواصل معنا</a>
+        </nav>
+
+    </header>
+
+
+    <section id="home" class="hero">
+
+        <div>
+
+            <h2 id="heroTitle">
+                أهلاً بكم في متجرنا 👕
+            </h2>
+
+            <p id="storeDescription">
+                أفضل الملابس بأفضل الأسعار
+            </p>
+
+            <a href="#products" class="main-button">
+                تصفح المنتجات
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <section id="products" class="products-section">
+
+        <h2>المنتجات</h2>
+
+        <input type="text" id="search" placeholder="🔍 ابحث عن بنطلون أو تيشيرت...">
+
+        <div id="categories" class="categories"></div>
+
+        <div id="productsContainer" class="products"></div>
+
+    </section>
+
+
+    <section id="contact" class="contact">
+
+        <h2>تواصل معنا</h2>
+
+        <p id="storeAddress"></p>
+
+        <p id="storePhone"></p>
+
+        <a id="whatsappButton" class="whatsapp" target="_blank">
+            💬 WhatsApp
+        </a>
+
+    </section>
+
+
+    <div id="orderModal" class="modal">
+
+        <div class="modal-content">
+
+            <button class="close" onclick="closeOrder()">
+                ×
+            </button>
+
+            <h2>طلب المنتج</h2>
+
+            <h3 id="orderProductName"></h3>
+
+            <form id="orderForm">
+
+                <input id="customerName" placeholder="اسمك" required>
+
+                <input id="customerPhone" placeholder="رقم الهاتف" required>
+
+                <input id="customerAddress" placeholder="العنوان" required>
+
+                <input id="orderSize" placeholder="المقاس" required>
+
+                <input id="orderColor" placeholder="اللون" required>
+
+                <input id="orderQuantity" type="number" min="1" value="1" required>
+
+                <button type="submit">
+                    إرسال الطلب
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+
+        <p>
+            جميع الحقوق محفوظة © 2026
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

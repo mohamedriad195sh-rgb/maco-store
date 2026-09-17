@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة تحكم المحل</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+    <div id="loginPage" class="login-page">
+        <div class="login-box">
+            <h1>🔐 لوحة التحكم</h1>
+            <p>تسجيل دخول صاحب المحل</p>
+
+            <input id="username" type="text" placeholder="اسم المستخدم">
+            <input id="password" type="password" placeholder="كلمة السر">
+
+            <button onclick="login()">دخول</button>
+
+            <p id="loginMessage"></p>
+        </div>
+    </div>
+
+
+    <div id="dashboard" class="dashboard hidden">
+
+        <header class="admin-header">
+            <div>
+                <h1>لوحة تحكم المحل</h1>
+                <p>إدارة المتجر والمنتجات والطلبات</p>
+            </div>
+
+            <button class="logout" onclick="logout()">تسجيل خروج</button>
+        </header>
+
+
+        <main>
+
+            <!-- بيانات المحل -->
+            <section class="panel">
+                <h2>🏪 بيانات المحل</h2>
+
+                <div class="form-grid">
+
+                    <div>
+                        <label>اسم المحل</label>
+                        <input id="storeName" type="text">
+                    </div>
+
+                    <div>
+                        <label>رقم WhatsApp</label>
+                        <input id="storeWhatsapp" type="text">
+                    </div>
+
+                    <div>
+                        <label>رقم التليفون</label>
+                        <input id="storePhone" type="text">
+                    </div>
+
+                    <div>
+                        <label>العنوان</label>
+                        <input id="storeAddress" type="text">
+                    </div>
+
+                    <div class="full">
+                        <label>وصف المحل</label>
+                        <textarea id="storeDescription"></textarea>
+                    </div>
+
+                    <div class="full">
+                        <label>لوجو المحل</label>
+                        <input id="storeLogo" type="file" accept="image/*">
+                    </div>
+
+                </div>
+
+                <button onclick="saveStore()">💾 حفظ بيانات المحل</button>
+
+                <p id="storeMessage"></p>
+            </section>
+
+
+            <!-- إضافة منتج -->
+            <section class="panel">
+
+                <h2>➕ إضافة منتج</h2>
+
+                <div class="form-grid">
+
+                    <div>
+                        <label>اسم المنتج</label>
+                        <input id="productName" type="text" placeholder="مثال: تيشيرت قطن">
+                    </div>
+
+                    <div>
+                        <label>السعر</label>
+                        <input id="productPrice" type="number" placeholder="مثال: 350">
+                    </div>
+
+                    <div>
+                        <label>القسم</label>
+
+                        <select id="productCategory">
+                            <option value="بناطيل">بناطيل</option>
+                            <option value="تيشيرتات">تيشيرتات</option>
+                            <option value="قمصان">قمصان</option>
+                            <option value="هوديز">هوديز</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label>المقاسات</label>
+                        <input id="productSizes" type="text" placeholder="S,M,L,XL">
+                    </div>
+
+                    <div>
+                        <label>الألوان</label>
+                        <input id="productColors" type="text" placeholder="أسود, أبيض, أزرق">
+                    </div>
+
+                    <div>
+                        <label>صورة المنتج</label>
+                        <input id="productImage" type="file" accept="image/*">
+                    </div>
+
+                    <div class="full">
+                        <label>وصف المنتج</label>
+                        <textarea id="productDescription"></textarea>
+                    </div>
+
+                </div>
+
+                <button onclick="addProduct()">➕ إضافة المنتج</button>
+
+                <p id="productMessage"></p>
+
+            </section>
+
+
+            <!-- المنتجات -->
+            <section class="panel">
+
+                <h2>👕 المنتجات الحالية</h2>
+
+                <div id="productsList" class="products-list">
+                    جاري تحميل المنتجات...
+                </div>
+
+            </section>
+
+
+            <!-- الطلبات -->
+            <section class="panel">
+
+                <h2>📦 الطلبات</h2>
+
+                <div id="ordersList">
+                    جاري تحميل الطلبات...
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="admin.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1789603783484",
+    "name": "هودي ",
+    "price": 550,
+    "category": "هوديز",
+    "sizes": "[\"M/L/XL\"]",
+    "colors": "[\"ابيض /اسود\"]",
+    "description": "هودي مستورد",
+    "image": "/uploads/1789603783417-85326.jpeg"
+  },
+  {
+    "id": "1789603851997",
+    "name": "بنطلون جينز",
+    "price": 450,
+    "category": "بناطيل",
+    "sizes": "[\"M/L/XL\"]",
+    "colors": "[\"ازرق\"]",
+    "description": "",
+    "image": "/uploads/1789603851973-66622.jpeg"
+  },
+  {
+    "id": "1789603917295",
+    "name": "قميص",
+    "price": 350,
+    "category": "قمصان",
+    "sizes": "[\"M/L\"]",
+    "colors": "[\"اسود\"]",
+    "description": "",
+    "image": "/uploads/1789603917284-2417.jpeg"
+  }
+]
